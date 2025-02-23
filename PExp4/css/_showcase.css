@@ -1,0 +1,18 @@
+*.VideoBG {
+  & > video:first-child + div {
+    display: flex; 
+    flex-flow: row wrap; 
+    align-items: center; 
+    justify-content: space-around;
+
+    & > img {
+      max-height: 80%; 
+      max-width: 20%;
+      box-shadow: 
+        0 0 0 3px hsla(0, 0%, 80%, 40%),
+        0 0 0 6px hsla(0, 0%, 80%, 30%),
+        0 0 0 9px hsla(0, 0%, 80%, 20%),
+        0 0 0 12px hsla(0, 0%, 80%, 10%);
+    }
+  } 
+}
