@@ -5,7 +5,7 @@
     align-items: center; 
     justify-content: space-around;
 
-    & > img {
+    & > img, & > video {
       max-height: 80%; 
       max-width: 20%;
       box-shadow: 

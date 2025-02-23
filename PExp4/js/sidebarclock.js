@@ -26,4 +26,4 @@ function tickClock() {
 
 tickClock();
 
-var clockIntervalID = setInterval(tickClock, 16);
+var clockIntervalID = setInterval(tickClock, 100);
