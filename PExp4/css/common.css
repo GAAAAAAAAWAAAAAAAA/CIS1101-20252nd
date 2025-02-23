@@ -1,0 +1,13 @@
+@import url("./joshs-reset.css");
+
+
+html, body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: hsl(182, 25%, 30%);
+  color: hsl(140, 80%, 90%);
+}
+
+a {
+  color: hsl(130, 100%, 75%);
+}

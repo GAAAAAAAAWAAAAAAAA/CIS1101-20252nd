@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PExp 4</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    body {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    body > * {
+      flex: 1 0 0;
+    }
+    #e-iframe-header, #e-iframe-footer {
+      width: 100%;
+      flex: 0 0;
+    }
+    #e-iframe-header {
+      flex-basis: 10%;
+      height: 10%;
+    }
+    #e-iframe-footer {
+      flex-basis: 5%;
+      height: 5%;
+    }
+    #e-mainwindow {
+      display: flex;
+      flex-flow: row nowrap;
+
+      & > #e-iframe-sidebar {
+        flex: 0 0 10%;
+      }
+
+      & > #e-iframe-main {
+        flex: 1 0 0;
+      }
+    }
+    body iframe {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <iframe src="./subpages/header.htm" frameborder="0" name="iframe-header" id="e-iframe-header"></iframe>
+  <div id="e-mainwindow">
+    <iframe src="./subpages/sidebar.htm" frameborder="0" name="iframe-sidebar" id="e-iframe-sidebar"></iframe>
+    <iframe src="about:blank" frameborder="0" name="iframe-main" id="e-iframe-main"></iframe>
+  </div>
+  <iframe src="./subpages/footer.htm" frameborder="0" name="iframe-footer" id="e-iframe-footer"></iframe>
+</body>
+</html>
