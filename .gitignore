@@ -7,3 +7,5 @@
 *.jpg
 *.gif
 *.bmp
+# Exclude *.js files (all script files for dev are in TS)
+*.js
