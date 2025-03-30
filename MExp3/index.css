@@ -1,0 +1,44 @@
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form#formEmpCalcu {
+  padding: 8px;
+  border-radius: 8px;
+  background: linear-gradient(hsl(360, 72%, 75%), hsl(235, 62%, 75%));
+}
+
+form#formEmpCalcu br {
+  height: 2px;
+}
+
+form#formEmpCalcu {
+  display: flex;
+  flex-flow: row nowrap;
+  & label, & input {
+    margin: 2px;
+  }
+}
+
+form#formEmpCalcu label {
+  display: inline-block;
+  min-width: 12ch;
+}
+
+form#formEmpCalcu input, form#formEmpCalcu select {
+  display: inline-block;
+  width: 20ch;
+  margin: 2px;
+}
