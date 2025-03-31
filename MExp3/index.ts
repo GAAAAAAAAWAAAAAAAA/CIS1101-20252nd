@@ -53,12 +53,12 @@ function dupdFormContents() : void {
   }
 }
 
-function refreshtimer_dupdEmpDisplay () : void {
+function refreshtimer_dupdEmpDisplay (force : boolean = false) : void {
   if (updateTimer > -1) {
     console.log(`Updater already running! refreshing timer.`)
     clearTimeout(updateTimer);
   }
-  updateTimer = setTimeout(dupdEmpDisplay, 1000);
+  updateTimer = setTimeout(dupdEmpDisplay, !force ? 1000 : 10);
   console.log(`updater timer id changed to ${updateTimer}`);
 }
 
@@ -134,9 +134,10 @@ function dupdEmpDisplay() : void {
 
 document.addEventListener("DOMContentLoaded", (ev) => {
   dupdFormContents();
-  document.getElementById("inpEmpnum")?.addEventListener('input', refreshtimer_dupdEmpDisplay);
-  document.getElementById("inpEmpNameFirst")?.addEventListener('input', refreshtimer_dupdEmpDisplay);
-  document.getElementById("inpEmpNameLast")?.addEventListener('input', refreshtimer_dupdEmpDisplay);
-  document.getElementById("inpEmpPosition")?.addEventListener('input', refreshtimer_dupdEmpDisplay);
-  document.getElementById("inpEmpWorkhours")?.addEventListener('input', refreshtimer_dupdEmpDisplay);
+  document.getElementById("inpEmpnum")?.addEventListener('input', () => {refreshtimer_dupdEmpDisplay()});
+  document.getElementById("inpEmpNameFirst")?.addEventListener('input', () => {refreshtimer_dupdEmpDisplay()});
+  document.getElementById("inpEmpNameLast")?.addEventListener('input', () => {refreshtimer_dupdEmpDisplay()});
+  document.getElementById("inpEmpPosition")?.addEventListener('input', () => {refreshtimer_dupdEmpDisplay()});
+  document.getElementById("inpEmpWorkhours")?.addEventListener('input', () => {refreshtimer_dupdEmpDisplay()});
+  document.getElementById("inpComp")?.addEventListener('click', () => {refreshtimer_dupdEmpDisplay(true)});
 });

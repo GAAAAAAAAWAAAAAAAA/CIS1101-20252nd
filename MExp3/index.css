@@ -3,8 +3,12 @@ html {
 }
 
 html, body {
+  font-size: 1.25em;
   width: 100vw;
   min-height: 100vh;
+  background-image: url("./bg.gif");
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 body {
@@ -17,7 +21,7 @@ body {
 form#formEmpCalcu {
   padding: 8px;
   border-radius: 8px;
-  background: linear-gradient(hsl(360, 72%, 75%), hsl(235, 62%, 75%));
+  background: linear-gradient(hsla(360, 72%, 75%, 90%), hsla(235, 62%, 75%, 90%));
 }
 
 form#formEmpCalcu br {
