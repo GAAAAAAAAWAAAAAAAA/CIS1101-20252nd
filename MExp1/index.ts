@@ -74,5 +74,6 @@ addEventListener("load", async (ev) => {
     }
   } 
   if (!isPass) resultcell.textContent = "FAILED";
+  resultcell.classList.add("yellow");
   mytable.insertAdjacentElement("beforeend", resultcell);
 })
